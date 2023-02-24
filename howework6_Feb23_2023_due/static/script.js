@@ -407,7 +407,7 @@ function displayReturnedDetail(i){
         seatMap_div.style.display = "none";
     } else {
         document.getElementById("seatMap").innerHTML = "<img alt='seat_map' src='" + seatMap + "'>";
-        seatMap_div.style.display = "block";
+        seatMap_div.style.display = "flex";
     }
     
     document.getElementById("event_details").style.display = "block";

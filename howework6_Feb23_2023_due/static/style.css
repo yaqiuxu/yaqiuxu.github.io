@@ -14,6 +14,9 @@ body {
 hr {
     border: 0;
 }
+html {
+    scroll-behavior: smooth;
+}
 
 /* search */
 #search_box {
@@ -140,7 +143,7 @@ input[type=checkbox] {
 }
 #result_table {
     background-color: white;
-    margin: 40px auto 0 auto;
+    margin: 40px auto 40px auto;
     border: 1px solid black;
 }
 table {
@@ -289,6 +292,8 @@ td {
 }
 #arrow:hover {
     cursor: pointer;
+    border-right: 3px solid lightgray;
+    border-bottom: 3px solid lightgray;
 }
 
 /* venue details */
@@ -323,12 +328,16 @@ td {
 #venue_info {
     display: flex;
     font-size: 20px;
+    margin-top: 50px;
     padding-bottom: 35px;
 }
 #venue_info a{
     text-decoration: none;
     color: deepskyblue;
     margin-top: 25px;
+}
+#venue_info a:hover{
+    color: royalblue;
 }
 #venue_info_list {
     width: 50%;
