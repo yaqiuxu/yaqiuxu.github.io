@@ -319,6 +319,7 @@ function displayReturnedDetail(i){
         date_div.style.display = "none";
     } else {
         document.getElementById("date").innerHTML = "<p class='detail_titles'>Date</p>" + "<p class='event_detail_text'>" + date + "</p>";
+        date_div.style.display = "block";
     }
     // set artist/team
     if (null_set.has(event._embedded?.attractions)) {
@@ -328,7 +329,7 @@ function displayReturnedDetail(i){
         for (let i = 0; i < event._embedded.attractions.length; i ++) {
             let artist = event._embedded.attractions?.[i]?.name;
             let artist_url = event._embedded.attractions?.[i]?.url;
-            if (null_set.has(artist) || null_set.has(artist_url)){
+            if (null_set.has(artist)){
                 continue;
             } else {
                 if (i == 0) {
@@ -349,18 +350,21 @@ function displayReturnedDetail(i){
     } else {
         selected_venue = venue;
         document.getElementById("venue").innerHTML = "<p class='detail_titles'>Venue</p>" + "<p class='event_detail_text'>"  + venue + "</p>";
+        venue_div.style.display = "block";
     }
     // set genres
     if (null_set.has(genres)){
         genres_div.style.display = "none";
     } else {
         document.getElementById("genres").innerHTML = "<p class='detail_titles'>Genres</p>" + "<p class='event_detail_text'>"  + genres + "</p>";
+        genres_div.style.display = "block";
     }
     // set price ranges
     if (null_set.has(priceRanges)){
         priceRanges_div.style.display = "none";
     } else {
         document.getElementById("priceRanges").innerHTML = "<p class='detail_titles'>Price Ranges</p>" + "<p class='event_detail_text'>" + priceRanges + "</p>";
+        priceRanges_div.style.display = "block";
     }
     // set ticket status
     if (null_set.has(ticketStatus)){
@@ -396,12 +400,14 @@ function displayReturnedDetail(i){
         BuyTicketAt_div.style.display = "none";
     } else {
         document.getElementById("BuyTicketAt").innerHTML = "<p class='detail_titles'>Buy Ticket At</p>" + "<a target='_blank' href='" + buyTicketAt + "'>Ticketmaster</a>";
+        BuyTicketAt_div.style.display = "block";
     }
     // set seat map
     if (null_set.has(seatMap)){
         seatMap_div.style.display = "none";
     } else {
         document.getElementById("seatMap").innerHTML = "<img alt='seat_map' src='" + seatMap + "'>";
+        seatMap_div.style.display = "block";
     }
     
     document.getElementById("event_details").style.display = "block";
@@ -439,6 +445,8 @@ function showVenue(){
             let address_div = document.getElementById("address");
             let google_map_search_div = document.getElementById("googleMapURL");
             let upcomingEvents_div = document.getElementById("upcomingEvents");
+
+            venue_logo_div.innerHTML = "";
 
             venue_name_div.innerHTML = "  " + venue_name + "  ";
             if (null_set.has(venue_logo) == false) {
