@@ -1,0 +1,355 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    background-image: url("background.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% auto;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+hr {
+    border: 0;
+}
+
+/* search */
+#search_box {
+    margin: 45px auto 0px auto;
+    width: 815px;
+    height: auto;
+    background-color: rgba(255, 255, 255, 0.20);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+}
+.header_box {
+    width: 770px;
+    height: 59px;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: 1px solid white;
+}
+.header_text{
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 42px;
+    text-align: center;
+    margin: 22px auto 0px auto;
+}
+#search_box label.required {
+    color: crimson;
+}
+#search_box label {
+    font-size: 20px;
+    color: lightblue;
+}
+form {
+    width: 770px;
+    margin: 0 auto;
+}
+#keyword_div {
+    margin-top: 35px;
+}
+#distance_category_div, #location_div {
+    margin-top: 15px;
+}
+#distance_category_div {
+    display: flex;
+}
+#distance_div {
+    width: 50%;
+}
+#distance {
+    width: 230px !important;
+}
+#category_div {
+    width: 50%;
+    margin-right: 0;
+}
+#search_form input, select{
+    margin-top: 8px;
+    height: 38px;
+    width: 100%;
+    box-sizing: border-box;  /*https://stackoverflow.com/questions/1377719/padding-within-inputs-breaks-width-100*/
+    background-color: transparent;
+    border: none;
+    border:solid 1px white;
+    border-radius: 10px;
+    outline: none;  /*when an element is focused*/
+    color: white;
+    font-size: 18px;
+    padding-left: 16px;
+}
+#search_form option{
+    color: black;    
+}
+::placeholder{
+    color: lightgray;    
+}
+input[type=number] {
+    -webkit-appearance: textfield;
+    /* -moz-appearance: textfield; */
+}
+input[type=number]:hover{
+    -moz-appearance: meter;
+}
+input[type=checkbox] {
+    width: 15px !important;
+    height: 15px !important;
+    margin: 0 5px 0 15px !important;
+}
+#auto_detect {
+    color: Gainsboro !important;
+}
+#buttons {
+    margin-top: 35px;
+    padding-bottom: 25px;
+}
+#search_button {
+    width: 135px;
+    height: 52px;
+    border-radius: 10px;
+    color: white;
+    font-size: 18px;
+    background-color: darkorange;
+    border: none;
+    border-bottom: 3px solid chocolate;
+}
+#clear_button {
+    width: 120px;
+    height: 52px;
+    border-radius: 10px;
+    color: white;
+    font-size: 18px;
+    background-color: cornflowerblue;
+    border: none;
+    border-bottom: 3px solid royalblue;
+}
+#search_button:hover {
+    background-color: rgb(250, 170, 70);
+}
+#clear_button:hover {
+    background-color: rgb(135, 170, 240);
+}
+
+/* search results */
+#search_results {
+    display: none;
+}
+#result_table {
+    background-color: white;
+    margin: 40px auto 0 auto;
+    border: 1px solid black;
+}
+table {
+    border-collapse: collapse;
+    text-align: center;
+}
+th {
+    height: 50px;
+    border: 1px solid black;
+    box-shadow: 0 5px 2px lightgray;
+    cursor: pointer;
+}
+td {
+    height: 86px;
+    border: 1px solid black;
+}
+.event_td:hover {
+    color: darkslateblue;
+    cursor: pointer;
+}
+.icon_img {
+    width: 90px;
+    height: 55px;
+}
+.date_detail, .icon_detail {
+    width: 230px;
+}
+.event_detail {
+    width: 610px;
+}
+.genre_detail {
+    width: 150px;
+}
+.venue_detail {
+    width: 305px;
+}
+
+/* no records */
+#no_recoreds_found {
+    display: none;
+    background-color: white;
+    width: 1330px;
+    height: 50px;
+    margin: 50px auto 0 auto;
+}
+#no_record_message {
+    color: firebrick;
+    font-weight: bold;
+    text-align: center;
+    font-size: 20px;
+    padding-top: 8px;
+}
+
+/* event details */
+#event_details {
+    display: none;
+}
+#event_detail_box {
+    margin: 70px auto 0 auto;
+    width: 1330px;
+    height: fit-content;
+    background-color: rgba(255, 255, 255, 0.20);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+}
+#eventTitle {
+    margin-top: 30px;
+    text-align: center;
+    color: white;
+    font-size: 34px;
+    font-weight: bold;
+}
+#detail_content {
+    display: flex;
+    padding: 60px 50px 50px 70px;
+}
+#detail_list {
+    width: 40%;
+}
+#seatMap {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+}
+#seatMap img {
+    max-width: 726px;
+}
+.detail_titles {
+    color: rgba(117,254,222,255) !important;
+    font-size: 28px !important;
+    margin-top: 20px !important;
+}
+.event_detail_text, #artistTeam {
+    color: white;
+    font-size: 18px;
+    display: inline-block;
+    margin-top: 5px;
+}
+#detail_list a{
+    text-decoration: none;
+    color: deepskyblue;
+    font-size: 18px;
+    display: inline-block;
+    margin-top: 5px;
+}
+#detail_list a:hover{
+    color: rgb(135, 170, 240);
+    cursor: pointer;
+}
+#onsale, #offsale, #canceled, #postponed, #rescheduled {
+    margin-top: 5px;
+    color: white;
+    text-align: center;
+    display: none;
+    width: fit-content;
+    padding: 5px 10px 0 10px;
+    height: 32px;
+    border-radius: 10px;
+}
+#onsale {
+    background-color: green;
+}
+#offsale {
+    background-color: crimson;
+}
+#canceled {
+    background-color: black;
+}
+#postponed, #rescheduled {
+    background-color: orange;
+}
+
+#show_venue_details {
+    color: lightgray;
+    font-size: 28px;
+    text-align: center;
+    margin-top: 30px;
+}
+#arrow {
+    margin: 0 auto 30px auto;
+    width: 30px;
+    height: 30px;
+    border-right: 2px solid lightgray;
+    border-bottom: 2px solid lightgray;
+    transform: rotate(45deg);
+}
+#arrow:hover {
+    cursor: pointer;
+}
+
+/* venue details */
+#venue_details {
+    display: none;
+    margin: 50px auto 60px auto;
+    width: 1290px;
+    height: fit-content;
+    background-color: white;
+    border: 1px solid black;
+    box-shadow: 0 0 0 18px white, 0 0 0 19px black;
+    border-radius: 20px;
+}
+#venue_name {
+    width: fit-content;
+    font-size: 32px;
+    text-align: center;
+    margin: 30px auto 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-bottom: 1px solid black;
+}
+#venue_logo {
+    height: auto;
+    margin: 20px auto 20px auto;
+}
+#venue_logo img {
+    max-width: 200px;
+    display: block;
+    margin: auto;
+}
+#venue_info {
+    display: flex;
+    font-size: 20px;
+    padding-bottom: 35px;
+}
+#venue_info a{
+    text-decoration: none;
+    color: deepskyblue;
+    margin-top: 25px;
+}
+#venue_info_list {
+    width: 50%;
+    border-right: 1px solid black;
+}
+#upcomingEvents {
+    width: 50%;
+    text-align: center;
+}
+#address_box {
+    display: flex;
+}
+#address_lable {
+    width: 40%;
+    font-weight: bold;
+    text-align: right;
+    margin-right: 15px;
+}
+#googleMapURL {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
