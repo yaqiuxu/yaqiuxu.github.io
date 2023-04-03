@@ -1,0 +1,312 @@
+/* Navigation */
+.nav_container {
+    display: flex;
+    justify-content: flex-end;
+}
+.nav_button {
+    width: 100px;
+    height: 40px;
+    margin-top: 1%;
+    background-color: transparent;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 5px 10px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav_button.selected {
+    border: 2px solid white !important;
+}
+.nav_text {
+    color: white!important;
+    width: 100px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+.no-hover-decoration {
+    text-decoration: none;
+}
+.no-hover-decoration:hover {
+    text-decoration: none;
+}
+
+/* search */
+.box, .box2 {
+    width: 770px;
+    margin: 5% auto 5% auto !important;
+    background-color: rgba(255, 255, 255, 0.20) !important;
+    backdrop-filter: blur(20px)!important;
+}
+.box {
+    border-radius: 20px !important;
+    height: auto !important;
+}
+.box2 {
+    height: 80%;
+}
+.header_box {
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: 1px solid white;
+}
+.header_text{
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 42px;
+    text-align: center;
+    margin: 8% auto 5% auto;
+}
+#search_form label.required {
+    color: crimson;
+}
+#search_form label {
+    font-size: 20px;
+    color: lightblue;
+}
+
+#keyword_div, #location_div, #buttons {
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
+    margin-top: 3%;
+}
+#distance_category_div {
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
+    display: flex;
+    flex-wrap: wrap;
+}
+#distance_div {
+    border-collapse: 'none';
+    margin-top: 3%;
+    width: 40% !important;
+}
+#distance {
+    width: 60%;
+}
+#category_div {
+    width: 30%;
+}
+/* Media query for larger screens */
+@media (min-width: 768px) {
+    .element-1 {
+        width: 40%;
+        padding-right: 5%;
+    }
+    .element-2, .col {
+        width: 30%;
+    }
+  }
+#search_form input, select{
+    height: 50%;
+    width: 100%;
+    box-sizing: border-box;  /*https://stackoverflow.com/questions/1377719/padding-within-inputs-breaks-width-100*/
+    background-color: transparent;
+    border: none;
+    border: solid 1px white;
+    border-radius: 5px;
+    outline: none;  /*when an element is focused*/
+    background-color: white !important;
+    font-size: 16px;
+    padding-left: 16px;
+}
+.ant-select-selection-search-input {
+    padding: 0 !important;
+    height: 100% !important;
+    font-size: 16px !important;
+}
+#search_form input:disabled {
+    background-color: lightgray !important;
+}
+#search_form option{
+    color: black;    
+}
+::placeholder{
+    color: lightgray;    
+}
+input[type=number] {
+    -webkit-appearance: textfield;
+    /* -moz-appearance: textfield; */
+}
+input[type=number]:hover{
+    -moz-appearance: meter;
+}
+input[type=checkbox] {
+    width: 15px !important;
+    height: 15px !important;
+    margin: 0 2% 0 0 !important;
+}
+#auto_detect {
+    border-collapse: 'none';
+    margin-top: 2%;
+    color: Gainsboro !important;
+}
+#buttons {
+    margin-top: 30px;
+    padding-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#search_button {
+    margin-right: 1%;
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    color: white;
+    font-size: 18px;
+    background-color: #dc3545;
+    border: none;
+}
+#clear_button {
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    color: white;
+    font-size: 18px;
+    background-color: #007bff;
+    border: none;
+}
+#search_button:hover {
+    background-color: #c52a3a;
+}
+#clear_button:hover {
+    background-color: #0470e4
+}
+
+
+/* search results */
+.table_container{
+    max-width: 100%;
+    margin: 5% auto 10% auto;
+    width: fit-content;  /*adjust the width to child*/
+    background-color: transparent;
+    border-radius: 30px;
+    padding: 0%;
+    overflow: hidden !important;
+}
+table {
+    /* border-collapse: collapse; */
+    text-align: center;
+    border-radius: 20px !important;
+}
+.event_td:hover {
+    cursor: pointer !important;
+}
+.date_detail, .icon_detail {
+    width: 15% !important;
+    max-width: 230px !important;
+}
+.bold_td {
+    font-weight: bold;
+}
+.event_detail {
+    width: 610px;
+}
+.genre_detail {
+    width: 150px;
+}
+.venue_detail {
+    width: 305px;
+}
+
+/* Card */
+.circle {
+    width: 30px;
+    height: 30px;
+    min-width: 30px;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.circle :hover {
+    cursor: pointer;
+}
+.detail_titles, .detail_titles_big {
+    color: rgba(117,254,222,255) !important;
+    margin-top: 1rem;
+}
+.detail_titles {
+    font-size: 20px !important;
+}
+.detail_titles_big {
+    font-size: 24px !important;
+    font-weight: bold;
+}
+.event_detail_text {
+    color: white;
+    font-size: 16px;
+    display: inline-block;
+    margin-bottom: 0;
+}
+label {
+    margin-bottom: 0 !important;
+}
+.hyperlink{
+    text-decoration: none;
+    color: deepskyblue;
+    font-size: 18px;
+    display: inline-block;
+}
+.hyperlink:hover{
+    color: rgb(135, 170, 240);
+    cursor: pointer !important;
+}
+
+/* card nav */
+.card_nav {
+    height: 50px;
+    background-color: cadetblue;
+}
+
+/* event details */
+#onsale, #offsale, #canceled, #postponed, #rescheduled {
+    color: white;
+    text-align: center;
+    width: fit-content;
+    padding: 5px 10px 0 10px;
+    height: 32px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+#onsale {
+    background-color: green;
+}
+#offsale {
+    background-color: crimson;
+}
+#canceled {
+    background-color: black;
+}
+#postponed, #rescheduled {
+    background-color: orange;
+}
+#ticketStatus {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.spotifyIcon {
+    margin: 10px auto;
+    width: fit-content;
+    display: block;
+}
+.albumImg {
+    width: 180px !important;
+    height: 180px !important;
+    object-fit: cover !important;
+    margin: 3% 3% 5% auto !important;
+}
+
