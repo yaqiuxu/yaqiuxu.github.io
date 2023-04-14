@@ -7,6 +7,8 @@ Add/replace the files/folders.
 `npm install`\
 Install Node.js packages or dependencies listed in the package.json file.
 
+(To test locally: in `package.json`, change `"start": "node server.js"` to `"start": "react-scripts start"`, and run the server in another terminal using `node server.js`)
+
 `npm start`\
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.\
