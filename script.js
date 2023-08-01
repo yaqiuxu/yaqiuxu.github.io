@@ -26,8 +26,8 @@ $(document).ready(function() {
                 "x": -1 + Math.random() * 2,
                 "y": -1 + Math.random() * 2
             };
-            this.vx = 0.3 * Math.random();
-            this.vy = 0.3 * Math.random();
+            this.vx = 1.2 * Math.random();
+            this.vy = 1.2 * Math.random();
             this.radius = randomInt(2, 3);
             this.float = function () {
                 this.x += this.vx * this.direction.x;
