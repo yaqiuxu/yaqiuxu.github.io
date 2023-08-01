@@ -1,1 +1,44 @@
-Hello World
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+        <link rel="stylesheet" href="./style.css">
+    </head>
+    <body>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+        <script src="./script.js"></script>
+        <link href='https://fonts.googleapis.com/css?family=Raleway:500,400,300,200,100' rel='stylesheet' type='text/css'>
+        <canvas class="container" id="container" role="main"></canvas>
+        <section class="bio">
+            <img class="bio-avatar" src="./avatar.jpg" width="150" />
+            <h1 class="bio-name">Yaqiu Xu</h1>
+            <p class="desc"></p>
+            <ul>
+                <li>
+                    <a href="mailto:yaqiuxu@usc.edu" 
+                        class="bio-link">yaqiuxu@usc.edu</a>
+                </li>
+                <li>
+                    <a target="_top" href="https://yaqiuxu.github.io/yaqiuxucsci571spring23.html"
+                        class="bio-link"
+                        target="_blank"
+                        rel="noopener noreferrer">CSCI 571</a>
+                </li>
+                <li>
+                    <a target="_top" href="https://blog.rulinxing.com/CSCI-526/"
+                        class="bio-link"
+                        target="_blank"
+                        rel="noopener noreferrer">CSCI 526</a>
+                </li>
+             </ul>
+
+        </section>
+        <div class="blur blurTop"><canvas class="canvas"id="blurCanvasTop"></canvas></div>
+        <div class="blur blurBottom"><canvas width="1000px" height="1000px" class="canvas" id="blurCanvasBottom"></canvas></div>
+
+
+        <!---references: --->
+        <!--https://codepen.io/JonasBadalic/pen/ExqNzZ-->
+        <!--https://codepen.io/team/codeschool/pen/wWEqZE-->
+    </body>
+</html>
