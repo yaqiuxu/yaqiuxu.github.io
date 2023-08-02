@@ -88,24 +88,30 @@ hr {
   position: relative;
 }
 
-.intro {
+
+ p.edu {
+  color: #797575;
+  margin: 5px 0;
+  text-align: left;
+ }
+
+ .education-area {
   width: 80%;
-  margin: 10px auto 10px auto;
+  margin: 30px auto 10px auto;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  flex-direction: row;
 }
- p {
-  color: #797575;
-  margin: 5px auto;
- }
-
 .education {
   width: 80%;
   margin: 10px auto 10px auto;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
+}
+.education-info {
+  margin-left: 20px;
 }
 
 ul {
